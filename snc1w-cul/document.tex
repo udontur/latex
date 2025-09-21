@@ -1,0 +1,341 @@
+% by github.com/udontur
+\documentclass{article}
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage{thmtools}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{framed}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tcolorbox}
+\usepackage{apacite}
+\usepackage{parskip}
+\usepackage{indentfirst}
+\usepackage{chemfig}
+\usepackage{hyperref}
+\usepackage[version=4,arrows=pgf-filled,mathfontname=mathsf]{mhchem}
+\setlength{\parindent}{1.5em}
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{\z@}%
+    {1.5ex \@plus 1ex \@minus .2ex}
+    {-1em}%
+    {\normalfont\normalsize\bfseries}}
+\colorlet{LightGray}{White!90!Periwinkle}
+\colorlet{LightOrange}{Orange!15}
+\colorlet{LightGreen}{Green!15}
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+\declaretheoremstyle[name=Theorem,]{thmsty}
+\declaretheorem[style=thmsty,numberwithin=section]{theorem}
+\tcolorboxenvironment{theorem}{colback=LightGray}
+\declaretheoremstyle[name=Proposition,]{prosty}
+\declaretheorem[style=prosty,numberlike=theorem]{proposition}
+\tcolorboxenvironment{proposition}{colback=LightOrange}
+\declaretheoremstyle[name=Principle,]{prcpsty}
+\declaretheorem[style=prcpsty,numberlike=theorem]{principle}
+\tcolorboxenvironment{principle}{colback=LightGreen}
+\setstretch{1.2}
+\geometry{
+    textheight=9in,
+    textwidth=5.5in,
+    top=1in,
+    headheight=12pt,
+    headsep=25pt,
+    footskip=30pt
+}
+\begin{document}
+% Front page
+\title{ \normalsize \textsc{}
+        \\ [2.0cm]
+        \HRule{1.5pt} \\
+        \LARGE \textbf{\uppercase{Kepler-452b Plan}
+        \HRule{2.0pt} \\ [0.6cm] \LARGE{SNC1W Culminating Project} \vspace*{10\baselineskip}}
+        }
+\date{}
+\author{\textbf{Hadrian Lau Yiu Hei} \\ 
+        DSC International School \\
+        2024 Semester 2\\
+        \href{https://hadrianlau.com}{{\color{blue}\underline{\LaTeX\, document code}}}}
+\maketitle
+\newpage
+% Table of content
+\tableofcontents
+\newpage
+ 
+% Content---------------------------------------------------------------------
+\section{Biology}
+ 
+\subsection{Existing strategies that preserve the ecosystems}
+There are two categories of ecosystem preservation strategies: in-situ and ex-situ.
+ 
+First, in-situ ecosystem preservations are conservations done in a natural environment. For example, green belts, reforestation, and wildlife sanctuaries are existing in-situ strategies implemented around the globe. 
+ 
+Green belts are land-use zones enforced by the government to retain wild and undeveloped areas. They prevent the development of the green-belted area, preserving the habitats and wildlife. For example, the Golden Horseshoe is a $7300km^{2}$ Canadian green belt that spans around the Greater Toronto Area in Canada \cite{cite1}. The Ontario government created the Golden Horseshoe to protect the green space in Ontario and restrain urban sprawl. 
+ 
+Reforestation involves planting trees in areas with insufficient vegetation. It tackles global warming by absorbing more carbon in the atmosphere, and rebuilds habitats for animals to endure. For example, the Great Green Wall is a Chinese forest development program that aims to plant $90$ million acres of new forests in northern China by the end of $2050$ \cite{cite2}. It aims to restrain the expansion of the Gobi desert to create a habitable land for wildlife and humans. 
+ 
+Wildlife sanctuaries are officially protected areas in the wild that restrict excessive human disturbance such as killing, interacting, and developing. It aims to preserve a balanced and comfortable ecosystem for wildlife to inhabit. For example, the Chinnar Wildlife Sanctuary is a $1200km^{2}$ Indian wildlife sanctuary that aims to protect the wildlife and natural sceneries of the forests in East Kerala. It is under consideration by UNESCO as a World Heritage Site \cite{cite3}. 
+ 
+Second, ex-situ ecosystem preservation are conservations done in an artificial environment. For example, zoological gardens, gene banks, and wildlife rehabilitation centers are existing ex-situ strategies implemented around the globe. 
+ 
+Zoological gardens, or zoos, in short, are artificial enclosures that are built for exhibition and wildlife conservation. It conserves the existence of endangered species, often rehabilitating them into the wild after recovery programs. For example, the Hong Kong Zoological and Botanical Gardens is one of the world's oldest zoological and botanical gardens (since $1864$). The $14$-acre garden conserves over $700$ species of animals, with various plants around the garden \cite{cite4}. 
+ 
+Gene banks are biorepositories that preserve genetic material such as seeds from plants and sperm and eggs from animals. It aims to preserve wildlife by freezing reproductive units of different species using liquid nitrogen and nutrient media. For example, the Svalbard Global Seed Vault in Norway is an international seed vault designed to secure the world's food supply and plant species by storing duplicate seeds in the gene bank. 
+ 
+Wildlife rehabilitation centers are treatment centers that aim to guide sick, injured, and orphaned animals to rehabilitate back to the wild. For example, the Jaguar Rescue Center is a rehabilitation center in Costa Rica that dedicates its service to releasing injured wildlife back into the wild. 
+ 
+In essence, the strategies that have been proven effective in preserving ecosystems include green belts, reforestation, wildlife sanctuaries, zoological gardens, gene banks, and wildlife rehabilitation centers. 
+ 
+\subsection{Implementation choice on Kepler-452b}
+Green belts, wildlife sanctuaries, and gene banks should be implemented to conserve the ecosystem of our new planet as they are the most effective strategies to implement. 
+ 
+\subsection{Negative human environmental impacts on ecosystems}
+Negative human environmental impacts include climate change, environmental pollution, and habitat loss. 
+ 
+Climate change involves the negative change in temperature and weather patterns due to human activities that release greenhouse gas, which triggers chain reactions that worsen climate change. For example, factories release greenhouse gases, which increase the global temperature by trapping more heat in the atmosphere. With an increase in global temperatures, ice caps melt faster and faster. As the ice caps melt, the sea level rises, which causes more flooding around the world. Climate change can cause a series of adverse impacts such as habitat loss, species extinction, uncomfortable temperatures, severe natural hazards, and death of humans. For example, the average temperature of the earth has risen $1.01^{o}C$ in the past $40$ years \cite{cite5}. This results in extreme weather events like the $2021$ Western North America heat wave. The highest temperature recorded is $49.6^{o}C$ in British Columbia. It caused a total of $900$ recorded deaths in both Canada and the United States. 
+ 
+Environmental pollution is the release of contaminants into the natural environment due to human activities such as factories, cars, and urbanization. Factories release contaminants such as hydrogen cyanide, heavy metals, acids, and gases. It causes asthma, sickness in humans, habitat loss, a decrease in air quality, and acid rain. For example, Delhi has heavy air pollution due to industrial waste, waste burning, and transportation. However, after the COVID-$19$ pandemic and lockdowns, Delhi’s air quality has improved significantly, astonishing most people in Delhi because it is their first time seeing the Himalayas without severe pollution.  
+ 
+Habitat loss is the destruction of habitats due to human activities such as deforestation and urban development. There are three types of habitat loss: destruction, fragmentation, and degradation. Habitat destruction eliminates surviving conditions (biotic and abiotic factors) for animals and plants. Habitat fragmentation is the division of ecosystems and natural habitats. Habitat degradation is the pollution of the ecosystem, which slowly removes the conditions for animals and plants to survive. These types of habitat loss contribute to the extinction of animals and plants due to the destruction of ecosystems. For example, over $185$ million acres of rainforest in the Amazon rainforest were destroyed due to deforestation, illegal development, and human activities. It causes habitat loss, which causes the loss of over $10$ thousand animal species per year\cite{cite6}. 
+ 
+In conclusion, negative human environmental impacts include climate change, habitat loss, and pollution.
+ 
+\subsection{Solutions that prevent the negative impacts}
+Greenhouse gas taxing, waste taxing, and green belts are solutions to prevent adverse impacts such as climate change, environmental pollution, and habitat loss. 
+ 
+Greenhouse gas taxes are tax policies implemented by the government to charge industrial corporations taxes for any greenhouse gases they emit. It aims to reduce greenhouse gas emissions, which tackles climate change, as corporations dislike taxes. 
+ 
+Waste taxing is a tax policy implemented by the government to charge industrial corporations taxes for any waste they release. It aims to reduce environmental pollution as corporations dislike taxes. 
+ 
+Green belts are land-use zones enforced by the government to retain wild and undeveloped areas. It prevents the development of the green-belted area, preventing habitat loss.
+ 
+\subsection{Government policies}
+The government should implement heavy pollution taxes to any parties to minimize human impact on ecosystems. It conserves the environment by reducing pollutants such as greenhouse gases, waste, and toxic chemicals. No party other than the government appreciates tax. 
+ 
+\newpage
+ 
+\section{Chemistry}
+ 
+\subsection{Compounds that people use for hygiene, medicine and food}
+Isopropanol, Paracetamol, and Glucose are common compounds in hygiene, Medicine, and Food, respectively. 
+ 
+Isopropanol or isopropyl alcohol is a common compound in the field of hygiene.  It comprises three carbon atoms, eight hydrogen atoms, and one oxygen atom (\ce{C3H8}). 
+ 
+\begin{figure}[htbp]
+    \center
+    \includegraphics[height=2.3cm]{img/fig1}
+    \caption{Isopropanol chemical structure}
+\end{figure}
+ 
+Isopropanol is a highly flammable, odorless, and colorless liquid. It has a boiling point of $82.3^{o}C$ and is soluble in water.  Isopropanol is produced by merging water and propene, producing a hydration reaction. Although the production of Isopropanol is relatively clean, the extraction of propene is not. Propene is extracted from natural gas, which harms the environment by destroying habitats and polluting land. The primary use of Isopropanol in hygiene is to provide sterilizing services. It sterilizes a surface by penetrating and causing fissures in the cell wall of germs and bacterias. Isopropanol is usually packaged in tissues or bottles for human use. For example, when humans eat at a restaurant, they sterilize their hands by wiping their hands with a tissue dipped in diluted Isopropanol. A slight overdose will cause alcohol intoxication, and a severe overdose will cause coma and possibly brain damage ($\text{LD}_{50}\; 5000 \;mg/kg$ (rat)) \cite{cite7}. Isopropanol is crucial in human society as it helps improve hygiene conditions. 
+ 
+Paracetamol or acetaminophen is a common compound in the field of medicine.  It comprises eight carbon atoms, nine hydrogen atoms, one nitrogen atom, and two oxygen atoms (\ce{C8H9NO2}). 
+ 
+\begin{figure}[htbp]
+    \center
+    \includegraphics[height=2.3cm]{img/fig2}
+    \caption{Paracetamol chemical structure}
+\end{figure}
+ 
+\newpage
+Paracetamol is an odorless white powder. It melts at $169.5^{o}C$ and is soluble in water \cite{cite8}. Paracetamol is produced through the acetylation of para-aminophenol with acetic anhydride.
+ 
+\begin{figure}[htbp]
+    \center
+    \includegraphics[height=2.3cm]{img/fig3}
+    \caption{Acetylation of para-aminophenol with acetic anhydride}
+\end{figure}
+ 
+The production of Paracetamol does not have a significant effect on the environment. The primary usage of Paracetamol in the medical field is to relieve moderate pain and fever, such as headache, toothache, and muscle pain. It relieves pain and fever by blocking neural channels related to pain recognition. Paracetamol is usually packaged as a pill and is consumed when a human senses pain and fever. Taking excessive amounts of Paracetamol can cause nausea, severe headache, yellow skin, liver failure, and kidney failure. ($\text{LD}_{50}\; 338\; mg/kg$ (rat)) \cite{cite9}. N-acetyl-p-benzoquinone imine (NAPQI) is produced through the metabolism of Paracetamol in the liver. Usually, a small amount of NAPQI is acceptable as the liver detoxifies it. However, if there is an excessive amount of Paracetamol, which produces NAPQI, liver failure occurs. Paracetamol is crucial in human society as it helps to relieve pain and fever, which is very common. 
+ 
+Glucose or d-glucose is a common compound in the field of food.  It comprises six carbon atoms, twelve hydrogen atoms, and six oxygen (\ce{C6H12O6}). Below is the chemical structure of glucose.
+ 
+\begin{figure}[htbp]
+    \center
+    \includegraphics[height=2.3cm]{img/fig4}
+    \caption{Glucose chemical structure}
+\end{figure}
+ 
+Glucose is produced through photosynthesis in vegetation, which converts water and carbon dioxide into glucose and oxygen with the help of light and chlorophyll. The production of glucose positively contributes significantly to the environment by removing a common greenhouse gas, carbon dioxide, from the atmosphere. Glucose is a primary source of energy that powers the human body’s organs, nervous system, and muscles. Cells use glucose to power themselves. It is usually consumed through carbohydrate food such as vegetables, grains, and fruits. Excessive glucose intake can cause severe hunger, fatigue, and diabetes mellitus. ($\text{LD}_{50}\; 25800\; mg/kg$ (rat)) \cite{cite10}. Glucose is crucial to human society as it provides energy for the human body. 
+ 
+In essence, Isopropanol, Paracetamol, and Glucose are common compounds in hygiene, Medicine, and Food, respectively. 
+ 
+\newpage
+ 
+\subsection{Essential compounds}
+Water (\ce{H2O}) regulates body temperature, moisturizes tissue, and maintains the osmotic balance in cells. water in the cells will move out when there is a higher concentration of solute outside the cell. It is trying to create equilibrium to ensure there is flow of water going in and out of the cell. 
+ 
+\begin{figure}[htbp]
+    \center
+    \includegraphics[height=2cm]{img/fig5}
+    \caption{Water chemical structure}
+\end{figure}
+ 
+ 
+Oxygen (\ce{O2}) is the fuel used alongside glucose that is required for growth, reproduction, and repair in organisms. 
+ 
+\begin{figure}[htbp]
+    \center
+    \includegraphics[height=1cm]{img/fig6}
+    \caption{Oxygen chemical structure}
+\end{figure}
+ 
+Glucose (\ce{C6H12O6}), with oxygen, powers the human body’s organs, nervous system, and muscles.
+ 
+\begin{figure}[htbp]
+    \center
+    \includegraphics[height=2.3cm]{img/fig7}
+    \caption{Glucos chemical structure}
+\end{figure}
+ 
+\newpage
+ 
+Sodium chloride (\ce{NaCl}) is required for the nervous system functionality. 
+ 
+\begin{figure}[htbp]
+    \center
+    \includegraphics[height=2.3cm]{img/fig8}
+    \caption{Sodium chloride chemical structure}
+\end{figure}
+ 
+Deoxyribonucleic acid (\ce{C15H31N3O13P2}) are instructions for the proteins that make and control the structure and function of the human body.
+ 
+\begin{figure}[htbp]
+    \center
+    \includegraphics[height=5cm]{img/fig9}
+    \caption{Deoxyribonucleic acid chemical structure}
+\end{figure}
+ 
+Hemoglobin (\ce{C2952H4464N3248O812S8Fe4}) helps bind and transfer oxygen to different organs from the blood. Heme (iron group) is combined with globin proteins to form hemoglobin. 
+ 
+\begin{figure}[htbp]
+    \center
+    \includegraphics[height=5cm]{img/fig10}
+    \caption{Hemoglobin chemical structure}
+\end{figure}
+ 
+\newpage
+ 
+\section{Earth and Space Science}
+ 
+\subsection{Purpose of space exploration}
+“The reasons to explore the universe are as vast and varied as the reasons to explore the forests, the mountains” as stated by NASA. Humans are naturally improvers and thrive on better results. We explore everything we can to develop new technology that improves the human world. The purpose of space exploration is to improve the understanding of space and improve the lives of humans through space technology. 
+ 
+\subsection{Cost of space missions}
+According to Big World Wide, it typically takes $58.5$ million USD to send one astronaut to the International Space Station \cite{cite11}. 
+ 
+According to SpaceX, it takes around $\$13000$ to send one kilogram to orbit in a falcon $9$ rocket \cite{cite12}. 
+\subsection{Risk of space exploration}
+There is a considerable risk of space exploration. Space exploration requires advanced technology to achieve high speed, protect against heat and radiation, maintain life in space, and develop programs that do not contain errors. If an error occurs during a space mission, the mission will be terminated immediately due to technology failure and human death. This causes humongous economic loss and precious human loss.  
+\subsection{Death in space missions}
+According to astronomy.com, no one has gone to space and not made it back. However, some people did not survive the launch and landing. $676$ out of $33$ have not survived these space journeys ($95.1\%$ survival rate) \cite{cite13}. For example, the most well-known space tragedy is the Space Shuttle Challenger in $1986$. The rocket boosters fly uncontrollably due to hardware failure related to sealing. The remaining rocket boosters force the rocket into an anti-aerodynamic position, which tears the rocket apart. Unfortunately, all crew members of the flight died \cite{cite14}. 
+\begin{figure}[htbp]
+    \center
+    \includegraphics[height=3cm]{img/fig11}
+    \caption{Space Shuttle Challenger during explosion}
+\end{figure}
+\subsection{Difficulty of space exploration}
+Space exploration requires a large amount of capital. The primary obstacles are the restriction of speed, the presence of radiation, the immense temperature (both hot and cold), the physical limitations of astronauts, and the cost. Tackling speed, radiation, and temperature requires advanced technology. Tackling the physical limitations of astronauts requires advanced technology and training. These all require a large amount of capital. 
+\subsection{Space agency on Kepler-452b and nearby planets}
+Space agency on Kepler-$452$b to explore the planet and others near that planet is a must. Suppose we have the technology to travel to Kepler-$452$b, which is very far away (suggested by the prolonged discovery time). In that case, we will have the technology to explore resources near Kepler-$452$b, given that the space agency base is on Kepler-$452$b. 
+\subsection{Cost of space agency on Kepler-452b and nearby planets}
+With the technology enabling us to travel to Kepler-$452$b, the cost of developing a space agency would be the cost of developing the Kepler-$452$b habitat and the cost of launching everything to Kepler-$452$b. 
+\subsection{Space research institution}
+Governmental space agencies, private space companies, and universities will do the research. For example, NASA, CNSA, ISRO, Roscosmos, ESA, JAXA, SpaceX, Blue Origin, Virgin Galactic, AFIT, UC Boulder, Caltech, UW, USC, UCB, and UCL. 
+\subsection{Continuous space research after reaching Kepler-452b}
+Humans are naturally improvers and thrive on better results. We explore everything we can to try to develop new technology that improves the human world. If we terminate research once we reach the new planet, we will be terminating a valuable resource for obtaining more knowledge about the mysterious world. 
+\newpage
+\section{Physics}
+\subsection{Hydroelectric power}
+Hydroelectric power, or hydropower, is one of the largest ancient renewable energy sources today, supplying over $14.3\%$ of the world’s electricity \cite{cite15}. It harvests the power of one of the most enormous flow resources, water flow, in rivers, waterfalls, and dams. As long as a flow of water spins a turbine, it is a hydroelectric power plant. 
+In the late $1800$s, early versions of a hydroelectric power plant consisted of a wooden wheel and a river. water flow in the river pushed the wooden wheel’s fins, propelling the wheel to spin. The wheel transferred its power to the connected machines and tools through a spinning stick.  After $150$ years of improvements, we currently have three types of hydroelectric power plants: impoundment, diversion, and pumped storage. 
+Most hydroelectric power plants use an impoundment facility. It uses a dam to store water in a reservoir, higher than the outlet river at the bottom of the power plant outflow. When the water level in the reservoir is higher than the intake located on top of the power plant, the control gate opens, which lets water flow down in a steep pipe called penstock. The potential energy in the water turns into kinetic energy as the water travels down the penstock, which pushes the turbine to spin in one direction. The spinning turbine propels the generator in the powerhouse, which generates electricity as a result. A transformer converts the electricity into a desired voltage connected to the transmission lines that deliver electricity to different. The resulting water next to the turbine will be pushed down to the draft tube, which exits by the outfollow, and down to the river. A net is placed before the intake to prevent marine animals from entering the turbine. A fishway is built next to the dam to let marine animals travel to the outlet river. 
+\begin{figure}[htbp]
+    \center
+    \includegraphics[height=4cm]{img/fig12}
+    \caption{Impoundment hydroelectric power plant}
+\end{figure}
+A diversion-style power plant is a channeled version of an impoundment-style power plant, which channels water into a separate facility before running through the power plant. A pumped storage-style power plant is a battery version of an impoundment-style power plant. It pumps water up to the reservoir to save water. The control gate is activated when extra electricity is needed, generating electricity in the power plant. 
+\subsection{Impacts of hydroelectric power}
+A typical hydroelectric plant costs $\$1.05m - \$7.65m \;\text{USD} / MW$ to build \cite{cite16}. The operation cost includes maintenance fee, employee payment, and government tax. They hire plant operators, janitors, security, and engineers to operate the plant. 
+Hydroelectric power has no positive environmental impacts. A hydroelectric power plant requires a large dam placed in a flowing river or waterfall, which blocks the natural flow of water and many pathways for marine animals (a fishway is not enough). This disturbs the nearby ecosystem by fragmenting it, which may cause minor wildlife extinction.
+The construction and operation of a hydroelectric plant requires various laborers, such as engineers, operation technicians, construction workers, janitors, security personnel, etc. The newly developed hydroelectric power plant in Kepler-$452$b generates these jobs. More job opportunities for citizens increase social mobility, which makes the community a more livable place. 
+However, the initial cost of building a hydroelectric power plant is tremendous. Only large companies familiar with hydroelectric power generation can build a plant on the new planet. Hence, a powerful company may dominate the hydroelectric industry in Kepler-$452$b. Such domination can lead to political events like oil and energy companies, which are usually unwanted on a newly established planet. 
+\subsection{Nuclear power (fission)}
+Nuclear power (the only successful nuclear power generation method: nuclear fission) is the world’s third largest non-renewable power source, supplying $9.11\%$ of the world’s electricity with over $440$ reactors. It harvests the power of nuclear fission, the process of splitting nuclei apart. 
+The first development of nuclear power plants dates back to the $1940$s when the Manhattan Project was launched to battle the Nazis with nuclear weapons. The first nuclear reactor was called the Chicago Pile-$1$, and its primary purpose was to experiment with nuclear fission. After $80$ years of continuous improvements, nuclear fission became one of the most complex and divine ways to generate electricity. 
+The essence of nuclear reactors are fuel rods, nuclear fission, and the reactor facility.
+Fuel rods are made of fuel pellets that contain Uranium dioxide (\ce{UO2}). To get Uranium dioxide pellets, we first need to mine uranium, which is done in an open-pit uranium mine. An open-pit uranium mine damages the environment just like a coal mine. It completely destroys nearby ecosystems and pollutes nearby land. Uranium is usually found in rocks like a mixture. A rock will be mined if the rock’s uranium content is more than $0.01\%$. These uranium rocks are then transported to a milling facility, where they are crushed and separated into different substances. There are two kinds of uranium: U-$238$ and U-$235$. Unfortunately, only U-$235$ is applicable to power plants, which is less than $1\%$ of the uranium mined earlier. After extracting the U-$235$, it dissolved into a liquid by chemicals. Once the liquid U-$235$ dries, it forms the “yellowcake” or solid triuranium octoxide (\ce{U3O8}). The yellowcake is taken to a conversion facility where the conversion facilities are operated under strict international laws. The yellowcake is turned into a gas called uranium hexafluoride (\ce{UF6}), which is then cooled back into a solid. The solid uranium hexafluoride will be further refined in an enrichment facility. The facility converts the uranium hexafluoride back to a gas and increases the concentration of the uranium hexafluoride gas. The concentrated gas is then chilled to solid form and shipped to the fabrication facility. The solid uranium hexafluoride will be converted to gas one last time before turning the uranium hexafluoride into uranium oxide powder (\ce{UO2}) through a fabrication process. The uranium oxide powder will be shaped into small fuel pellets. Then, the fuel pellets are placed into a furnace so the powder can merge because of the intense heat. Finally, the fuel pellets are packed into a specially made metal tube, which forms the fuel rods that power the nuclear power plants today. These fuel rods will be bundled for the nuclear reactors. 
+Nuclear fission is the primary principle of a nuclear reactor. The nuclear chain reaction begins when the fissile material, typically U-$235$ atoms in a fuel pellet, absorbs an extra neutron. When the neutron hits the nucleus of the U-$235$ atom, it turns into U-$236$, an excited state of U-$235$. The extremely unstable U-$236$ quickly breaks apart, releasing Kr-$92$, Ba-$141$, gamma rays, and $2$to $3$ neutrons. The released Kr-$92$ and Ba-$141$ are called fission fragments, which contain kinetic energy. When the fragments collide with other atoms, the kinetic energy converts to thermal energy. The gamma rays are converted into thermal energy through the photoelectric effect, Compton scattering, and pair production. The released neutrons will collide with other U-$235$ nuclei in the fuel pellet, causing a chain reaction. A control rod controls the chain reaction, which absorbs neutrons that get in its way. A nuclear reactor is needed to use the thermal energy emitted by nuclear fission. 
+\begin{figure}[htbp]
+    \center
+    \includegraphics[height=3.5cm]{img/fig13}
+    \caption{Nuclear fission (U-$235$)}
+\end{figure}
+Currently, there are two main types of nuclear reactors: pressurized water reactors (PWR) and boiling water reactors (BWR). 
+The pressurized water reactor, or PWR, is an indirect water boiling reactor. First, the fuel rods in the reactor vessel undergo nuclear fission by removing the control rods from the fissile material. The naturally decaying uranium will release a neutron, which triggers the chain reaction that produces thermal energy. The excess reaction will be controlled by the control rods. The heat exchange water travels through the reactor vessel, heating the water in a concealed channel. This heat exchange water will be named water-A, which only stays in the concealed tube that connects to the reactor vessel. When temperature increases, pressure increases. A pressurizer keeps the water in the water-A loop from boiling. The pressurizer is a sealed compartment connected to the water-A loop. It contains high-pressure water created by heating the water in the sealed compartment. Since the compartment is sealed and the water is heated, the pressure increases (water-A is separated from the pressurizer water). When water-A’s pressure is lower than the standard pressure, the pressurized water in the pressurizer is released to increase the pressure of water-A. When water-A’s pressure is higher than the standard pressure, the pressurizer draws water-A away to decrease the pressure of water-A. The extremely hot water-A continues to travel to the concealed tube. When it arrives in a concealed tube in the steam generator (a separate tube), the heat exchange water in the steam generator (water-B, entirely separated from water-A in another tube) will be boiled to steam. The water-B steam travels up to the steam generator and propels the turbine using the kinetic energy of water-B steam. The turbine pushes the generator, which generates electricity for citizens to use. 
+\begin{figure}[htbp]
+    \center
+    \includegraphics[height=4cm]{img/fig14}
+    \caption{Pressurized water reactor (PWR)}
+\end{figure}
+The boiling water reactor, or BWR, is the same as the PWR, except the water-A and water-B tubes are connected. The pressurizer is also removed. 
+\begin{figure}[htbp]
+    \center
+    \includegraphics[height=4cm]{img/fig15}
+    \caption{Boiling water reactor (BWR)}
+\end{figure}
+\subsection{Impact of nuclear power}
+A typical nuclear plant costs $\$5.5m - \$8.1m \;\text{USD} / MW$ to build \cite{cite17}. The operation cost includes fuel ($\$0.49 \; \text{USD} / kWh$, refuel every two years)maintenance fees, employee payments, and government tax. They hire plant technicians, plant operators, janitors, security, and engineers to operate the plant. 
+ 
+Nuclear power has no positive environmental impacts. A nuclear power plant requires uranium fuel rods mined in a uranium mine. An open pit mine destroys nearby ecosystems by pollution and altering landforms, which cause the animals to migrate as the area is inhabitable. These animals may be an invasive species to other ecosystems, which further destroys more ecosystems. Modern nuclear power plants have stringent safety measures regarding power plant safety. Under these safeguards, a nuclear power plant explosion that causes radioactive coolant to escape is nearly impossible. Moreover, the only radioactive part of a nuclear reactor is its fuel rods and radioactive coolant. The discharge of radioactive fuel rods is buried deep underground with cement covering it, which is highly safe. The radioactive coolant is constantly kept in a closed-loop environment, which does not leak unless there is an explosion. The Fukushima Japan radioactive water was produced due to active cooling of the disaster’s remains. 
+ 
+Nuclear power plants are one of the most complex electricity generation methods. Their development requires numerous scientists and engineers who research and advance nuclear physics technology. These technological innovations improve humanity. 
+ 
+Environmental activists oppose nuclear energy as it damages the environment during the mining process. When the new planet is established, it receives much attention. In other words, if there is news about nuclear power plants, it receives much attention. Environmental activists will protest on the street with a “Just Stop Oil” style, which will disturb the community and economy on Earth.
+ 
+ 
+\subsection{Implementation choice in Kepler-452b}
+Hydroelectric will be used for electricity generation on Kepler-$452$b. The primary reason is because hydroelectric is renewable. Hydroelectric can theoretically run forever, do minimal harm to the environment, and is nearly $100\%$ clean. Moreover, early development does not require a large amount of energy, which can be totally covered by hydroelectric power plants. A small number of nuclear power plants will be built for emergency backup usage. 
+ 
+\section{End}
+From this culminating project, I learned a lot. This includes environmental conservation strategies, information about different chemical compounds, and how nuclear and hydroelectric power plants work.
+ 
+I used LaTeX to code this report, using tools like VSCode, LaTeX workshop, and TexLive.
+ 
+I learned a lot about using LaTeX to write reports, including LaTeX syntax and different user package usage. However, the most time-consuming part is debugging latex (The biggest bug is the bibliography bug where I forgot to remove the .bib extension, and I wasted at least 3 hours). 
+ 
+Thank you for reading this report; there is a reference page on the next page.
+% ---------------------------------------------------------------------
+ 
+% Usage
+%BOX
+%\begin{theorem}
+%    This is a theorem.
+%\end{theorem}
+%
+%\begin{proposition}
+%    This is a proposition.
+%\end{proposition}
+%
+%\begin{principle}
+%    This is a principle.
+%\end{principle}
+ 
+%IMAGE
+%\begin{figure}[htbp]
+%    \center
+%    \includegraphics[scale=0.06]{img/photo.jpg}
+%    \caption{Sydney, NSW}
+%\end{figure}
+ 
+%CITE
+%\cite{TAG}.
+ 
+% Bibliography
+\newpage
+\bibliographystyle{apacite}
+\bibliography{reference}
+\end{document}
