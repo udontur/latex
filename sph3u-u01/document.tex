@@ -90,7 +90,8 @@
 	\date{}
 	\author{
 		\textbf{Hadrian Lau Yiu Hei} \\ 
-		DSC International School \\
+		\textbf{Ms. Rashmi Shroff}\\
+		Sin Chi Lam, Jae-Hee Han, Sadan Ahmed Shaikh, Brinstan Lo, Junho Song \\
 		26th September, 2025\\ %HERE
 		\href{https://hadrian.cc}{{\color{blue}\underline{\LaTeX\, document code}}}
 	}
@@ -110,8 +111,11 @@
 	
 	\subsection{Raw data}
 	Length of pendulum wire: $L=33\text{cm}=0.33\text{m}$\\
+	
 	Initial angular displacement: $\theta=5^\circ$ to the right\\
+	
 	Mass of pendulum bob: $M=?$\\
+	
 	Bob diameter: $d=1.5\text{cm}=0.015\text{m}$
 	
 	\subsection{Actual time trials}
@@ -163,6 +167,14 @@
 	The purpose of the projectile motion lab is to determine the properties of a projectile through displacement graphs, velocity graphs, and a variety of data. We placed a steel ball at the top of the ramp, and captured the trajectory of the steel ball using a slow motion camera.
 	
 	\subsection{Raw data}
+	Steel ball mass:
+	
+	Each grid's length: 
+	
+	Each grid's width:
+	
+	Steel ball diameter:
+	
 	After reviewing the slow motion video, we can compile the following data points:
 	\begin{center}
 		\begin{tabular}{ |c|c|c| } 
@@ -244,6 +256,22 @@
 		\vec{v_{fy}}&=1.76\text{m}/\text{s}\;[\downarrow]\\
 	\end{align*}
 	\subsection{Position-Time graph}
+	Using the table of values, where the displacement on the y-axis ($\vec{\Delta d}_y$) in $\text{m} \,[\rightarrow]$ (meters) is the y-axis and the time (t) in s (seconds), we can plot the following graph:
+	
+	\subsubsection{Theoretical graph}
+	We included the theoretical graph as a comparison for error sources:
+	\begin{align*}
+		\vec{\Delta d}_y&=\Delta t\left(\vec{v}_{iy}+\frac{1}{2}\vec{a}_y\Delta t\right)\\
+		\vec{\Delta d}_y&=\Delta t\left(0+\frac{1}{2}(-9.81 \text{m}/\text{s}^2\;[\uparrow])\Delta t\right)\\
+		\vec{\Delta d}_y&=-4.905 \text{m}/\text{s}^2\;[\uparrow]\times\Delta t^2\\
+	\end{align*}
+	Since we are dropping from a height of 0.158m, we get the following equation:
+	\begin{align*}
+		\vec{\Delta d}_y&=0.158-4.905 \text{m}/\text{s}^2\;[\uparrow]\times\Delta t^2\\
+		\Aboxed{\vec{\Delta d}_y&=0.158-4.905t^2}
+	\end{align*}
+	
+	\subsubsection{Position-Time graph}
 	\begin{center}
 		\begin{tikzpicture}
 			\begin{axis} [
@@ -262,24 +290,28 @@
 				xmajorgrids=true,
 				legend pos=north east,
 				grid style=dashed,
-			]	
+				]	
 				\addplot[
-					color=DarkBlue,
-					domain=0:0.18,
+				color=DarkBlue,
+				domain=0:0.18,
 				] {
 					0.158-4.905*x*x
 				};
 				\legend{$\vec{\Delta d}_y=0.158-4.905t^2$, Actual data}
 				\addplot[
-					color=DarkGreen,
-					mark=square,
+				color=DarkGreen,
+				mark=square,
 				] coordinates {
 					(0,0.158)(0.03,0.148)(0.06,0.13)(0.09,0.105)(0.12,0.07)(0.15,0.025)(0.165,0)
 				};
 			\end{axis}
 		\end{tikzpicture}
 	\end{center}
+	\subsubsection{error sources}
+	\newpage
 	\subsection{Velocity-Time graph}
+	There are no data for the velocity of the steel ball. Hence, we need to calculate it from the table of values
+	\subsubsection{Velocity calulations}
 	We calculate the velocity by calculating the slope of each interval in the position time graph:
 	\begin{align*}
 		m_0&=0\\
@@ -289,6 +321,17 @@
 		m_5=\frac{y_5-y_4}{x_5-x_4}=\frac{0.023-0.068}{0.15-0.12}=\frac{-0.045}{0.03}&=-1.5\\
 		m_6=\frac{y_6-y_5}{x_6-x_5}=\frac{0-0.023}{0.165-0.15}=\frac{-0.023}{0.015}&\approx-1.533
 	\end{align*}
+	
+	\subsubsection{Theoretical graph}
+	We included the theoretical graph as a comparison for error sources:
+	\begin{align*}
+		\vec{a}_y&=\frac{\vec{v}_{fy}-\vec{v}_{iy}}{\Delta t}\\
+		-9.81\text{m}/\text{s}^2\;[\uparrow]&=\frac{\vec{v}_{fy}-0}{\Delta t}\\
+		-9.81\text{m}/\text{s}^2\;[\uparrow]\times\Delta t&=\vec{v}_{fy}\\
+		\Aboxed{\vec{v}_y&=-9.81t}
+	\end{align*}
+	
+	\subsubsection{Velocity-Time graph}
 	\begin{center}
 		\begin{tikzpicture}
 			\begin{axis} [
@@ -324,6 +367,7 @@
 			\end{axis}
 		\end{tikzpicture}
 	\end{center}
+	\subsubsection{error sources}
 	
 	\newpage
 	
