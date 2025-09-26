@@ -1,6 +1,10 @@
-**/document.aux
-**/document.log
-**/document.out
-**/document.pdf
-**/document.synctex.gz
-**/document.toc
+**/*.aux
+**/*.bbl
+**/*.bcf
+**/*.blg
+**/*.log
+**/*.out
+**/*.pdf
+**/*.run.xml
+**/*.synctex.gz
+**/*.toc

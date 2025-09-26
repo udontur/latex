@@ -16,7 +16,6 @@
 \usepackage[dvipsnames,svgnames]{xcolor}
 \usepackage[most]{tcolorbox}
 \usepackage{thmtools}
-\usepackage{apacite}
 \usepackage{indentfirst}
 \usepackage{parskip}
 \usepackage{chemfig}
@@ -28,6 +27,7 @@
 \usepackage{blindtext}
 \usepackage{hyperref}
 \usepackage{empheq}
+\usepackage{apacite}
 
 % Settings
 \pgfplotsset{width=15cm,compat=1.18}
@@ -94,7 +94,7 @@
 		\textbf{Ms. Rashmi Shroff}\\
 		Sin Chi Lam, Jae-Hee Han, Sadan Ahmed Shaikh, Brinstan Lo, Junho Song \\
 		26th September, 2025\\ %HERE
-		\href{https://hadrian.cc}{{\color{blue}\underline{\LaTeX\, document code}}}
+		\href{https://github.com/udontur/latex/blob/main/sph3u-u01}{{\color{blue}\underline{\LaTeX\, document code}}}
 	}
 	\maketitle
 	\thispagestyle{empty}
@@ -108,7 +108,7 @@
 	
 	% Content
 	\section{Pendulum Motion}
-	The purpose of the pendulum motion lab is to determine the acceleration due to gravity. A pendulum with a string length of 0.33m, attached with a 1.5cm in diameter steel ball, is dropped from a $5^\circ$ from the right without external forces. We recorded the time it takes for 10 oscillations for a total of 3 times for maximum accuracy. 
+	A steel ball, attached to a 33cm long string, is dropped from a $5^{\circ}$ angle and swings freely. We tracked the time it takes for 10 oscillations to occur using a $8\times$ slow-motion camera \cite{cite3}. 
 	
 	\subsection{Raw data}
 	Length of pendulum wire: $L=33\text{cm}=0.33\text{m}$\\
@@ -122,21 +122,21 @@
 		t_3&=11.65\text{s}
 	\end{align*}\\
 	\subsection{Trial calculations}
-	The average actual time for 10 oscillations is:
+	The average time for 10 oscillations are:
 	\begin{align*}
 		t_{10avg}&=\frac{11.66\text{s}+11.85\text{s}+11.65\text{s}}{3}\\
 		&=\frac{35.16\text{s}}{3} \\
 		t_{10avg}&=11.72\text{s}\\
 	\end{align*}
 	
-	So, the average actual time for 1 oscillations is:
+	Hence, the average time for 1 oscillation to occur is:
 	\begin{align*}
 		t_{avg}&=\frac{11.72\text{s}}{10}\\
 		\Aboxed{t_{avg}&=1.17\text{s}}
 	\end{align*}
 	
 	\subsection{Theoretical time}
-	We can calculate the theoretical time for each oscillation under perfect conditions using the simple harmonic motion equation:
+	We can calculate the theoretical time for each oscillation to occur using the simple harmonic motion equation:
 	\begin{align*}
 		t_{the}&=2\pi\times\sqrt{\frac{L}{g}}\\
 		&=2\pi\times\sqrt{\frac{0.33\text{m}}{9.81\text{m}/\text{s}^2}}  \\
@@ -144,57 +144,62 @@
 		&=2\pi\times 0.183\text{s} \\
 		\Aboxed{t_{the}&=1.15\text{s}}
 	\end{align*} 
-	
+	\newpage
 	\subsection{Error sources}
-	Our actual time measurements are quite accurate. There is a very small difference between our actual time and the theoretical time:
+	There is a very small difference between our actual time and theoretical time: 
 	\begin{align*}
 		\Delta&=1.17\text{s}-1.15\text{s} \\
 		&=0.02\text{s}\\
 	\end{align*}
-	
 	This marginal time difference of 20 milliseconds can be caused by errors like:
 	\begin{itemize}
-		\item Human error
-		\item Theoretical value of g is not the same around the world
-		\item Air resistance
+		\item Human error: The measurement of string length (The bar and the steel ball is in the way when we try to measure the string length), oscillation time, and calculations are all rounded. Precision is loss during this process. 
+		\item Air resistance: The steel ball and string experiences air resistance, which slows down the pendulum as heat energy from the friction between air and the two objects are transferred to the surrounding.
 	\end{itemize}
 	\subsection{Experiment optimization}
-	
+	We can optimize the experiment by:
+	\begin{itemize}
+		\item Fixed string length: Attaching a pre-cut string ensures the length to be more accurate and stable throughout the experiment, preventing gear slipping and interference during measurement. 
+		\item High-accuracy slow-motion camera: A slow-motion camera with high accuracy, such as a 32× slow-motion camera, enhances time measurement by increasing the time resolution.
+	\end{itemize}
 	\newpage
 	
 	\section{Projectile motion}
-	The purpose of the projectile motion lab is to determine the properties of a projectile through displacement graphs, velocity graphs, and a variety of data. We placed a steel ball at the top of the ramp, and captured the trajectory of the steel ball using a slow motion camera.
+	A steel ball is projected forward from a ramp. The ball's trajectory is tracked by a grid plane and captured using a 8$\times$ slow-motion camera.
 	
 	\subsection{Raw data}
 	Each grid's length: 2cm=0.2m\\
-	Each grid's width: 2cm-0.2m\\
-	Steel ball diameter: 1.5cm = 0.015m
+	Each grid's width: 2cm=0.2m
 	
-	After reviewing the slow motion video, we can compile the following data points:
+	We can compile the following data using the 8$\times$ slow-motion video:
+	\bigskip
+	\bigskip
 	\begin{center}
 		\begin{tabular}{ |c|c|c| } 
 			\hline
-			$\vec{\Delta d_x}$ (m [$\rightarrow$]) & $\vec{\Delta d_y}$ (m [$\uparrow$]) & t (s)\\ 
+			t (s) & $\vec{\Delta d_x}$ (m [$\rightarrow$]) & $\vec{\Delta d_y}$ (m [$\uparrow$]) \\ 
 			\hline\hline
-			0.00m & 0.20m & 0.00s\\
+			0.00s & 0.00m & 0.20m\\
 			\hline 
-			0.02m & 0.19m & 0.03s\\ 
+			0.03s & 0.02m & 0.19m \\ 
 			\hline
-			y0.04m & 0.17m & 0.06s\\
+			0.06s & 0.04m & 0.17m \\
 			\hline
-			0.06m & 0.14m & 0.09s \\
+			0.09s & 0.06m & 0.14m \\
 			\hline
-			0.08m & 0.10m & 0.12s\\
+			0.12s & 0.08m & 0.10m \\
 			\hline
-			0.10m & 0.05m & 0.15s \\
+			0.15s & 0.10m & 0.05m \\
 			\hline
-			0.12m & 0.00m & 0.18s\\
+			0.18s & 0.12m & 0.00m \\
 			\hline
 		\end{tabular} 
 	\end{center}
 	\bigskip
+	\bigskip
+	\bigskip
 	\mynote{We measured everything using the steel ball's bottom.}
-	\mynote{The steel ball is tracked using a 2cm grid plane. These values are obtained by scaling the values obtained on the grid plane.}
+	\mynote{The slow-motion video is recording at 8 times slower than real time (240 fps to 30 fps). }
 	
 	\newpage
 	
@@ -218,16 +223,14 @@
 	\subsubsection{Initial Velocity \& Final Velocity (x-axis)}
 	According to the laws of projectile motion, $\vec{v_{ix}}=\vec{v_{fx}}$.
 	\begin{align*}
-		\vec{\Delta d}_x&=\frac{\vec{v_{ix}}+\vec{v_{fx}}}{2}\times \Delta t\\
-		&=\frac{2\vec{v_x}}{2}\times \Delta t\\
-		&=\vec{v_x}\times \Delta t\\
+		\vec{\Delta d}_x&=\vec{v_x}\times \Delta t\\
 		0.12\text{m}\; [\rightarrow]&=\vec{v_x} \times 0.18\text{s}\\
 		\vec{v_x}&=\frac{0.12\text{m}\; [\rightarrow]}{0.18\text{s}}\\
-		\vec{v_x}&=0.67\text{m}/\text{s}\;[\rightarrow]\\
+		      &=0.67\text{m}/\text{s}\;[\rightarrow]\\
 		\Aboxed{\vec{v_{ix}}=\vec{v_{fx}}&=0.67\text{m}/\text{s}\;[\rightarrow]}
 	\end{align*}
 	\subsubsection{Initial Velocity (y-axis)}
-	Since we did not push the steel ball downwards, gravity is the only force that affects it. Hence, when the steel ball is slid down from the ramp, then:
+	Since we did not push the steel ball downwards, gravity is the only force that affects it. Hence, there is no initial velocity:
 	\begin{align*}
 		\Aboxed{\vec{v_{iy}}&=0\text{m}/\text{s}\;[\emptyset]}\\
 	\end{align*}
@@ -237,42 +240,46 @@
 		\vec{\Delta d}_y&=\Delta t\left(\vec{v}_{fy}-\frac{1}{2}\vec{a}_y\Delta t\right)\\
 		0.20\text{m}\;[\downarrow]&=0.18\text{s}\left(\vec{v}_{fy}-\frac{1}{2}\left(9.81\text{m}/\text{s}^2\;[\downarrow]\right)0.18\text{s}\right)\\
 		\frac{0.20\text{m}\;[\downarrow]}{0.18\text{s}}&=\vec{v}_{fy}-\frac{1}{2}\times9.81\text{m}/\text{s}^2\;[\downarrow]\times0.18\text{s}\\
-		1.1\text{m}/\text{s}\;[\downarrow]&=\vec{v}_{fy}-0.83\text{m}/\text{s}\;[\downarrow]\\
-		\Aboxed{\vec{v}_{fy}&=1.93\text{m}/\text{s}\;[\downarrow]}
+		1.1\text{m}/\text{s}\;[\downarrow]&=\vec{v}_{fy}-0.88\text{m}/\text{s}\;[\downarrow]\\
+		\Aboxed{\vec{v}_{fy}&=1.98\text{m}/\text{s}\;[\downarrow]}
 	\end{align*}
 	\newpage
 	\subsection{Position-Time graph}
-	Using the table of values, where the displacement on the y-axis ($\vec{\Delta d}_y$) in $\text{m} \,[\rightarrow]$ (meters) is the y-axis and the time (t) in s (seconds), we can plot a graph using the following table:
+	We can plot a graph using the table of values, where the displacement is on the y-axis ($\vec{\Delta d}_y$) in $\text{m} \,[\rightarrow]$ (meters), and the time (t) in s (seconds) is on the x-axis:
+	\bigskip
+	\bigskip
 	\begin{center}
 		\begin{tabular}{ |c|c| } 
 			\hline
-			$\vec{\Delta d_y}$ (m [$\uparrow$]) & t (s)\\ 
+			t (s) & $\vec{\Delta d_y}$ (m [$\uparrow$]) \\ 
 			\hline\hline
-			0.20m & 0.00s\\
+			0.00s & 0.20m \\
 			\hline 
-			0.19m & 0.03s\\ 
+			0.03s & 0.19m \\ 
 			\hline
-			0.17m & 0.06s\\
+			0.06s & 0.17m \\
 			\hline
-			0.14m & 0.09s \\
+			0.09s & 0.14m \\
 			\hline
-			0.10m & 0.12s\\
+			0.12s & 0.10m \\
 			\hline
-			0.05m & 0.15s \\
+			0.15s & 0.05m \\
 			\hline
-			0.00m & 0.18s\\
+			0.18s & 0.00m \\
 			\hline
 		\end{tabular} 
 	\end{center}
-	
+	\bigskip
+	\bigskip
+	\bigskip
 	\subsubsection{Theoretical displacement equation}
 	We included the theoretical graph as a comparison for error sources:
 	\begin{align*}
 		\vec{\Delta d}_y&=\Delta t\left(\vec{v}_{iy}+\frac{1}{2}\vec{a}_y\Delta t\right)\\
-		\vec{\Delta d}_y&=\Delta t\left(0+\frac{1}{2}(-9.81 \text{m}/\text{s}^2\;[\uparrow])\Delta t\right)\\
+		&=\Delta t\left(0+\frac{1}{2}(-9.81 \text{m}/\text{s}^2\;[\uparrow])\Delta t\right)\\
 		\vec{\Delta d}_y&=-4.905 \text{m}/\text{s}^2\;[\uparrow]\times\Delta t^2\\
 	\end{align*}
-	Since we are dropping from a height of 0.158m, we get the following equation:
+	Since we are dropping from a height of 0.20m, we get the following equation:
 	\begin{align*}
 		\vec{\Delta d}_y&=0.20-4.905 \text{m}/\text{s}^2\;[\uparrow]\times\Delta t^2\\
 		\Aboxed{\vec{\Delta d}_y&=0.2-4.905t^2}
@@ -316,26 +323,27 @@
 	\end{center}
 	\newpage
 	\subsection{Velocity-Time graph}
-	There are no raw data for the veocity of the steel ball. Hence, we need to calculate the equation of the velocity by taking the derivative of the equation
-
-	By entering the data points in Google Sheets, we get the following equation for the curve of best fit of the position time graph:
+	There are no raw data for the velocity of the steel ball. Hence, we need to calculate the equation for the velocity by taking the derivative of the position-time curve of best fit equation.
+	\subsubsection{Velocity-Time equation}
+	By entering the position-time data in Google Sheets, we get the following equation for the curve of best fit of the position-time graph \cite{cite2}:
 	\begin{align*}
 	V(t)=-4.89t^2-0.25t+0.201 
 	\end{align*}
 	
-	Take the derivative of $V(t)$:
+	Take the derivative of $V(t)$ \cite{cite1}:
 	\begin{align*}
-		V(t)&=-4.89t^2-0.25t+0.201 \\
-		V'(t)&=-4.89(2t)-0.25+0\\
+		V'(t)&=\frac{d}{dt}\left[-4.89t^2-0.25t+0.201\right]\\
+		&=\frac{d}{dt}[-4.89t^2]-\frac{d}{dt}[0.25t]+\frac{d}{dt}[0.201]\\
+		&=-4.89(2t)-0.25+0\\
 		\Aboxed{V'(t)&=-9.78t-0.25}
 	\end{align*}
-	\subsubsection{Theoretical velocity equation}
+	\subsubsection{Theoretical velocity-time equation}
 	We included the theoretical graph as a comparison for error sources:
 	\begin{align*}
 		\vec{a}_y&=\frac{\vec{v}_{fy}-\vec{v}_{iy}}{\Delta t}\\
 		-9.81\text{m}/\text{s}^2\;[\uparrow]&=\frac{\vec{v}_{fy}-0}{\Delta t}\\
 		-9.81\text{m}/\text{s}^2\;[\uparrow]\times\Delta t&=\vec{v}_{fy}\\
-		\Aboxed{\vec{v}_y&=-9.81t}
+		\Aboxed{\vec{v}_y&=-9.81t}lam_2025_what
 	\end{align*}
 	
 	\subsubsection{Velocity-Time graph}
@@ -380,34 +388,38 @@
 	
 	The velocity-time graph is linear like the theoretical graph, but the values differ because of errors from the position-time graph. 
 	
+	The small errors are created by:
+	\begin{itemize}
+		\item 
+	\end{itemize}
+	
 	\subsection{Experiment optimization}
 	
 	\newpage
+	
+	\bibliographystyle{apacite}
+	\bibliography{references.bib}
+	
 	\section{Licensing}
 	\subsection{Packages}
 	All \LaTeX\, packages are provided by TeX Live under the LaTeX Project Public License (LPPL).\\
 	
-	\subsection{Tools}
-	The \LaTeX\, engine is provided by TeX Live under the LaTeX Project Public License (LPPL).\\
-	
-	The \LaTeX\, code editor is provided by TeXstudio under the GNU General Public License (GPL) version 2.\\
-	
 	The \LaTeX\, typesetting system is distributed under the LaTeX Project Public License (LPPL).\\
 	
-	The NixOS Linux Operating System is distributed under the GNU Lesser General Public License (LGPL) version 2.1.\\
+	\subsection{Tools}
+	The \LaTeX\, engine is provided by TeX Live under the LaTeX Project Public License (LPPL), distributed by Nixpkgs Unstable.\\
 	
-	%\newpage
-	%\bibliographystyle{plain}
-	%\bibliography{references}  % Add a .bib file if you have references
+	The \LaTeX\, code editor is provided by TeXstudio under the GNU General Public License (GPL) version 2, distributed by Nixpkgs Unstable.\\
+	
+	The NixOS Linux Operating System is distributed under the GNU Lesser General Public License (LGPL) version 2.1, distributed by Nixpkgs Unstable.\\
+	
+	MyBib, Overleaf Learn, and Google Sheets is used for producing this document. 
+	\bigskip
+	\bigskip
+	\begin{center}
+		\textbf{Made with passion by Hadrian Lau}
+	\end{center}
 	
 \end{document}
 
-% All LaTeX packages are provided by TeX Live under the LaTeX Project Public License (LPPL).
-% The pgfplots package is licensed under the GNU General Public License (GPL) version 3 or later.
-% The titlesec package is licensed under the MIT License.
-% The LaTeX engine is provided by TeX Live under the LaTeX Project Public License (LPPL).
-% NixOS Linux Operating System is distributed under the GNU Lesser General Public License (LGPL) version 2.1.
-% The LaTeX code editor is provided by TeXstudio under the GNU General Public License (GPL) version 2.
-% The LaTeX typesetting system is distributed under the LaTeX Project Public License (LPPL).
-
-
+% Made with passion by Hadrian Lau
