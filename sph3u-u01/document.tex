@@ -18,6 +18,7 @@
 \usepackage{thmtools}
 \usepackage{apacite}
 \usepackage{indentfirst}
+\usepackage{parskip}
 \usepackage{chemfig}
 \usepackage{pgfplots}
 \usepackage[version=4,arrows=pgf-filled,mathfontname=mathsf]{mhchem}
@@ -153,8 +154,8 @@
 	
 	This marginal time difference of 20 milliseconds can be caused by errors like:
 	\begin{itemize}
-		\item Imprecise measurements: EXPLAIN
-		\item Gross errors: EXPLAIN
+		\item Human error
+		\item Theoretical value of g is not the same around the world
 		\item Air resistance
 	\end{itemize}
 	\subsection{Experiment optimization}
@@ -315,40 +316,19 @@
 	\end{center}
 	\newpage
 	\subsection{Velocity-Time graph}
-	There are no data for the velocity of the steel ball. Hence, we need to calculate it from the table of values
-	\subsubsection{Velocity calculations}
-	We calculate the velocity by calculating the slope of each interval in the position time graph:
+	There are no raw data for the veocity of the steel ball. Hence, we need to calculate the equation of the velocity by taking the derivative of the equation
+
+	By entering the data points in Google Sheets, we get the following equation for the curve of best fit of the position time graph:
 	\begin{align*}
-		m_0 &= 0 \\
-		m_1 &= \frac{y_1 - y_0}{x_1 - x_0} = \frac{0.19 - 0.2}{0.03 - 0} = \frac{-0.01}{0.03} = -0.33 \\
-		m_2 &= \frac{y_2 - y_1}{x_2 - x_1} = \frac{0.17 - 0.19}{0.06 - 0.03} = \frac{-0.02}{0.03} = -0.67 \\
-		m_3 &= \frac{y_3 - y_2}{x_3 - x_2} = \frac{0.14 - 0.17}{0.09 - 0.06} = \frac{-0.03}{0.03}  = -1 \\
-		m_4 &= \frac{y_4 - y_3}{x_4 - x_3} = \frac{0.10 - 0.14}{0.12 - 0.09} = \frac{-0.04}{0.03}  = -1.33 \\
-		m_5 &= \frac{y_5 - y_4}{x_5 - x_4} = \frac{0.05 - 0.10}{0.15 - 0.12} = \frac{-0.05}{0.03}  = -1.67 \\
-		m_6 &= \frac{y_6 - y_5}{x_6 - x_5} = \frac{0 - 0.05}{0.18 - 0.15} = \frac{-0.05}{0.03} = -1.67
+	V(t)=-4.89t^2-0.25t+0.201 
 	\end{align*}
-	We can get the following table:
-	\begin{center}
-		\begin{tabular}{ |c|c| } 
-			\hline
-			$\vec{\Delta v}_y (\text{m}/\text{s}^2 [\uparrow])$ & t (s)\\ 
-			\hline\hline
-			0.00 $\text{m}/\text{s}^2$ & 0.00s\\
-			\hline 
-			-0.33 $\text{m}/\text{s}^2$ & 0.03s\\ 
-			\hline
-			-0.67 $\text{m}/\text{s}^2$ & 0.06s\\
-			\hline
-			-1.00 $\text{m}/\text{s}^2$ & 0.09s\\
-			\hline
-			-1.33 $\text{m}/\text{s}^2$ & 0.12s\\
-			\hline
-			-1.67 $\text{m}/\text{s}^2$ & 0.15s\\
-			\hline
-			-1.67 $\text{m}/\text{s}^2$ & 0.18s\\
-			\hline
-		\end{tabular} 
-	\end{center}
+	
+	Take the derivative of $V(t)$:
+	\begin{align*}
+		V(t)&=-4.89t^2-0.25t+0.201 \\
+		V'(t)&=-4.89(2t)-0.25+0\\
+		\Aboxed{V'(t)&=-9.78t-0.25}
+	\end{align*}
 	\subsubsection{Theoretical velocity equation}
 	We included the theoretical graph as a comparison for error sources:
 	\begin{align*}
@@ -384,21 +364,21 @@
 				] {
 					-9.81*x
 				};
-				\legend{$\vec{v}_y=-9.81t$, Actual data}
+				\legend{$\vec{v}_y=-9.81t$, $V'(t)=-9.78t-0.25$}
 				\addplot[
 					color=DarkGreen,
-					mark=square,
-				] coordinates {
-					(0,0)(0.03,-0.33)(0.06,-0.67)(0.09,-1)(0.12,-1.33)(0.15,-1.67)(0.17,-1.67)
+					domain=0:0.18,
+				] {
+					-9.78*x-0.25
 				};
 			\end{axis}
 		\end{tikzpicture}
 	\end{center}
 	
 	\subsection{Error sources}
-	The position-time graph has similar curves and values as the theoretical graph. 
+	The position-time graph has similar curves as the theoretical graph, but the values differ as the time increases.
 	
-	The velocity-time graph also has similar slope and values as the theoretical graph, but at the last data point, the velocity does not match the linear progression because of errors during measurement. It is very hard to accurrately measure where and when the steel ball lands because there is a plastic plate covering the last bit of the graph. 
+	The velocity-time graph is linear like the theoretical graph, but the values differ because of errors from the position-time graph. 
 	
 	\subsection{Experiment optimization}
 	
