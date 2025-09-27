@@ -93,7 +93,7 @@
 		\textbf{Hadrian Lau Yiu Hei} \\ 
 		\textbf{Ms. Rashmi Shroff}\\
 		Sin Chi Lam, Jae-Hee Han, Sadan Ahmed Shaikh, Brinstan Lo, Junho Song \\
-		26th September, 2025\\ %HERE
+		29th September, 2025\\ %HERE
 		\href{https://github.com/udontur/latex/blob/main/sph3u-u01}{{\color{blue}\underline{\LaTeX\, document code}}}
 	}
 	\maketitle
@@ -168,8 +168,8 @@
 	A steel ball is projected forward from a ramp. The ball's trajectory is tracked by a grid plane and captured using a 8$\times$ slow-motion camera.
 	
 	\subsection{Raw data}
-	Each grid's length: 2cm=0.2m\\
-	Each grid's width: 2cm=0.2m
+	Each grid's length: 2cm=0.02m\\
+	Each grid's width: 2cm=0.02m
 	
 	We can compile the following data using the 8$\times$ slow-motion video:
 	\bigskip
@@ -204,7 +204,7 @@
 	\newpage
 	
 	\subsection{Calculations}
-	All calculations are based on the table of values. 
+	All calculations are based on the table of values. The x and y direction is not dependent on each other. 
 	\subsubsection{Total Displacement (x-axis)}
 	The total displacement in the x-axis:
 	\begin{align*}
@@ -230,10 +230,20 @@
 		\Aboxed{\vec{v_{ix}}=\vec{v_{fx}}&=0.67\text{m}/\text{s}\;[\rightarrow]}
 	\end{align*}
 	\subsubsection{Initial Velocity (y-axis)}
-	Since we did not push the steel ball downwards, gravity is the only force that affects it. Hence, there is no initial velocity:
+	Since we did not push the steel ball downwards, gravity is the only force that affects it. Hence, there is no initial velocity. Theoretically:
 	\begin{align*}
 		\Aboxed{\vec{v_{iy}}&=0\text{m}/\text{s}\;[\emptyset]}\\
 	\end{align*}
+	However, if we use our data to find the initial velocity:
+	\begin{align*}
+		\vec{\Delta d}_y&=\Delta t\left(\vec{v}_{iy}+\frac{1}{2}\vec{a}_y\Delta t\right)\\
+		0.20\text{m}\;[\downarrow]&=0.18\text{s}\left(\vec{v}_{iy}+\frac{1}{2}\left(9.81\text{m}/\text{s}^2\;[\downarrow]\right)0.18\text{s}\right)\\
+		\frac{0.20\text{m}\;[\downarrow]}{0.18\text{s}}&=\vec{v}_{iy}-\frac{1}{2}\times9.81\text{m}/\text{s}^2\;[\downarrow]\times0.18\text{s}\\
+		1.1\text{m}/\text{s}\;[\downarrow]&=\vec{v}_{iy}+0.88\text{m}/\text{s}\;[\downarrow]\\
+		\vec{v}_{iy}&=0.22\text{m}/\text{s}\;[\downarrow]
+	\end{align*}
+	Since we did not put any force on the ball, it should not have an initial velocity. This error is likely caused by imprecise measurements when we are compiling data using the $8\times$ slow motion camera. 
+	
 	\subsubsection{Final Velocity (y-axis)}
 	The final velocity in the y-axis:
 	\begin{align*}
@@ -327,15 +337,16 @@
 	\subsubsection{Velocity-Time equation}
 	By entering the position-time data in Google Sheets, we get the following equation for the curve of best fit of the position-time graph \cite{cite2}:
 	\begin{align*}
-	V(t)=-4.89t^2-0.25t+0.201 
+	D(t)=-4.89t^2-0.25t+0.201 
 	\end{align*}
 	
-	Take the derivative of $V(t)$ \cite{cite1}:
+	Take the derivative of $D(t)$ \cite{cite1}:
 	\begin{align*}
-		V'(t)&=\frac{d}{dt}\left[-4.89t^2-0.25t+0.201\right]\\
+		D'(t)&=\frac{d}{dt}\left[-4.89t^2-0.25t+0.201\right]\\
 		&=\frac{d}{dt}[-4.89t^2]-\frac{d}{dt}[0.25t]+\frac{d}{dt}[0.201]\\
 		&=-4.89(2t)-0.25+0\\
-		\Aboxed{V'(t)&=-9.78t-0.25}
+		D'(t)&=-9.78t-0.25\\
+		\Aboxed{V(t)&=-9.78t-0.25}
 	\end{align*}
 	\subsubsection{Theoretical velocity-time equation}
 	We included the theoretical graph as a comparison for error sources:
@@ -343,7 +354,7 @@
 		\vec{a}_y&=\frac{\vec{v}_{fy}-\vec{v}_{iy}}{\Delta t}\\
 		-9.81\text{m}/\text{s}^2\;[\uparrow]&=\frac{\vec{v}_{fy}-0}{\Delta t}\\
 		-9.81\text{m}/\text{s}^2\;[\uparrow]\times\Delta t&=\vec{v}_{fy}\\
-		\Aboxed{\vec{v}_y&=-9.81t}lam_2025_what
+		\Aboxed{\vec{v}_y&=-9.81t}
 	\end{align*}
 	
 	\subsubsection{Velocity-Time graph}
@@ -372,7 +383,7 @@
 				] {
 					-9.81*x
 				};
-				\legend{$\vec{v}_y=-9.81t$, $V'(t)=-9.78t-0.25$}
+				\legend{$\vec{v}_y=-9.81t$, $V(t)=-9.78t-0.25$}
 				\addplot[
 					color=DarkGreen,
 					domain=0:0.18,
@@ -382,19 +393,24 @@
 			\end{axis}
 		\end{tikzpicture}
 	\end{center}
-	
+	\newpage
 	\subsection{Error sources}
 	The position-time graph has similar curves as the theoretical graph, but the values differ as the time increases.
 	
 	The velocity-time graph is linear like the theoretical graph, but the values differ because of errors from the position-time graph. 
 	
-	The small errors are created by:
+	The errors are caused by:
 	\begin{itemize}
-		\item 
+		\item Imprecise measurements: The steel ball falls quickly. Even with a $8\times$ slow-motion camera, the ball appears blurry at each frame, especially towards the end of the trajectory. This reduces the accuracy of tracking the steel ball's exact position. 
+		\item Equipment collision: When the steel ball hits the plastic platform, it appears to sink slightly into the surface of the platform, the bounces back up to the platform's level. This happens because the plastic platform bends under the pressure of the impact of the steel ball. However, the steel ball seems to sink more than the already bent plastic platform, which is strange. 
+		\item Plastic platform: There is a solid-colored plastic barrier that guards the ball from falling, which makes it impossible to precisely see where ball lands. Additionally, the plastic barrier makes it difficult to move the platform precisely to the exact 10 grid position. 
 	\end{itemize}
 	
 	\subsection{Experiment optimization}
-	
+	\begin{itemize}
+		\item Remove the plastic platform: Removing the plastic platform eliminates interference when the ball hits the vertical 10-grid mark. The platform is completely useless because it causes three measurement errors while adding no value to the experiment. The ball does not need to stop exactly at the 10-grid mark for accurate data collection. The ball can continue traveling while we still get the correct data.
+		\item High time-resolution camera: A slow-motion camera with high accuracy, such as a $32\times$ slow-motion camera, enhances time measurement by increasing the time resolution, making the ball's position clear in each time frame. 
+	\end{itemize}
 	\newpage
 	
 	\bibliographystyle{apacite}
